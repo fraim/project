@@ -37,6 +37,99 @@
   `vite-plugin-svgr`), и в Webpack (через `@svgr/webpack` в `oneOf` по
   `resourceQuery: /react/`); URL-импорты оставлены для изображений.
 
+## Структура проекта
+
+```
+src/
+├── app/                          # инициализация: store, стили, провайдеры
+│   ├── store/                    # configureStore + persist-подписка
+│   └── styles/                   # глобальные CSS
+│
+├── pages/                        # страницы-композиции
+│   ├── HomePage/                 # каталог
+│   ├── ProductPage/              # карточка товара
+│   ├── CartPage/                 # корзина
+│   ├── FavoritesPage/            # избранное
+│   ├── ProfilePage/              # профиль (использует edit-profile + delete-account)
+│   ├── SignInPage/               # вход
+│   ├── SignUpPage/               # регистрация
+│   └── NotFoundPage/             # 404
+│
+├── widgets/                      # крупные самодостаточные блоки
+│   ├── Header/                   # шапка с поиском, корзиной, профилем
+│   ├── Footer/
+│   ├── CardList/                 # сетка товаров
+│   ├── LoadMore/                 # пагинация по кнопке
+│   └── ReviewList/               # список отзывов с формой
+│
+├── features/                     # пользовательские действия
+│   ├── auth/                     # SignIn/SignUp-формы, WithProtection HOC
+│   │   ├── model/                # RTK Query: login, register
+│   │   └── ui/
+│   ├── add-to-cart/              # добавление, счётчик в корзине
+│   │   ├── model/                # хуки useCartCount, useAddToCart
+│   │   └── ui/
+│   │       ├── AddToCartAction/
+│   │       ├── CartCounter/
+│   │       └── CartCounterConnected/
+│   ├── toggle-like/              # LikeButton c useOptimistic
+│   │   └── ui/LikeButton/
+│   ├── add-review/               # форма отзыва на useActionState
+│   │   └── ui/AddReviewForm/
+│   ├── edit-profile/             # форма редактирования профиля
+│   │   └── ui/EditProfileForm/
+│   ├── delete-account/           # удаление аккаунта + модалка
+│   │   └── ui/DeleteAccountButton/
+│   ├── search-products/          # поиск в хедере
+│   │   ├── model/
+│   │   └── ui/SearchProducts/
+│   └── sort-products/            # сортировка каталога
+│       ├── model/                # useSort
+│       └── ui/SortProducts/
+│
+├── entities/                     # бизнес-сущности
+│   ├── user/
+│   │   ├── api/                  # authApi: login, register, getMe, updateMe, deleteUser
+│   │   └── model/                # userSlice + selectors
+│   ├── product/
+│   │   ├── api/                  # productApi: getProducts, like/unlike, reviews
+│   │   └── ui/
+│   │       ├── Price/
+│   │       └── ProductImage/
+│   ├── cart/
+│   │   ├── model/                # cartSlice + selectors + persist
+│   │   └── ui/
+│   │       ├── CartAmount/       # useMemo-суммы
+│   │       ├── CartBadge/        # счётчик в хедере
+│   │       └── CartItem/
+│   └── review/
+│       └── ui/ReviewCard/
+│
+└── shared/                       # переиспользуемое без бизнес-контекста
+    ├── api/                      # baseQuery RTK Query с авторизацией
+    ├── assets/
+    │   ├── icons/                # SVG-иконки (импорт с ?react)
+    │   └── images/
+    ├── hooks/                    # общие хуки
+    ├── lib/                      # утилиты (cartStorage, authStorage)
+    ├── providers/
+    │   └── router/config/        # createBrowserRouter + маршруты
+    ├── store/
+    │   ├── hooks/                # useAppSelector, useAppDispatch
+    │   └── slices/
+    ├── types/                    # глобальные типы (Product, User, ...)
+    ├── ui/                       # UI-кит
+    │   ├── Button/
+    │   ├── ButtonBack/
+    │   ├── Input/
+    │   ├── Loader/
+    │   ├── Logo/
+    │   ├── Modal/                # React.createPortal + focus trap
+    │   ├── Rating/
+    │   └── WithQuery/            # обёртка loading/error состояний
+    └── utils/
+```
+
 ## Webpack vs Vite+SWC
 
 Замер: чистая сборка production (без прогретого кеша) на этом проекте,
