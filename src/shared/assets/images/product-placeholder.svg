@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+	<rect width="200" height="200" fill="#eceff1"/>
+	<rect x="8" y="8" width="184" height="184" rx="12" fill="#f4f6f7" stroke="#cfd8dc" stroke-width="2" stroke-dasharray="6 6"/>
+	<g transform="translate(60 58)" fill="#7b8e98">
+		<path d="M40 22c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm0 12c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"/>
+		<path d="M70 12H54l-4-6H30l-4 6H10C6.7 12 4 14.7 4 18v44c0 3.3 2.7 6 6 6h60c3.3 0 6-2.7 6-6V18c0-3.3-2.7-6-6-6zm2 50c0 1.1-.9 2-2 2H10c-1.1 0-2-.9-2-2V18c0-1.1.9-2 2-2h18l4-6h16l4 6h18c1.1 0 2 .9 2 2v44z"/>
+	</g>
+	<text x="100" y="150" text-anchor="middle" fill="#7b8e98" font-family="Arial, sans-serif" font-size="14" font-weight="600">Нет фото</text>
+</svg>

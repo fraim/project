@@ -1,0 +1,16 @@
+.select {
+	padding: 10px 18px;
+	font-size: 14px;
+	font-family: inherit;
+	background-color: #fff;
+	border: 1px solid #cfd8dc;
+	border-radius: 55px;
+	color: #1a1a1a;
+	cursor: pointer;
+	outline: none;
+	transition: border-color 0.2s;
+}
+
+.select:focus {
+	border-color: #feba0c;
+}

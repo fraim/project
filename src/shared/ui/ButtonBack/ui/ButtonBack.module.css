@@ -1,0 +1,31 @@
+.button {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 10px 16px;
+	margin-bottom: 8px;
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 20px;
+	color: #1a1a1a;
+	background: #ffffff;
+	border: 1px solid #cfd8dc;
+	border-radius: 55px;
+	cursor: pointer;
+	transition: background-color 0.2s, border-color 0.2s, transform 0.15s;
+}
+
+.button:hover {
+	background: #ffe44d;
+	border-color: #ffe44d;
+}
+
+.button:focus-visible {
+	outline: 2px solid #f8a815;
+	outline-offset: 2px;
+}
+
+.button svg {
+	width: 18px;
+	height: 18px;
+}

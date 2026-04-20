@@ -1,0 +1,12 @@
+.wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 40px 0;
+	min-height: 48px;
+}
+
+.end {
+	color: #7b8e98;
+	font-size: 14px;
+}

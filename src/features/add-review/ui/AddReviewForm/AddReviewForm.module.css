@@ -1,0 +1,48 @@
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 12px;
+}
+
+.textarea {
+	box-sizing: border-box;
+	width: 100%;
+	min-height: 120px;
+	padding: 12px 16px;
+	font-family: inherit;
+	font-size: 14px;
+	line-height: 20px;
+	background: #ffffff;
+	border: 1px solid #cfd8dc;
+	border-radius: 12px;
+	resize: vertical;
+}
+
+.textarea:focus {
+	border-color: #ffe44d;
+	outline: none;
+}
+
+.submit {
+	padding: 14px 24px;
+	border-radius: 55px;
+	background: #ffe44d;
+	border: none;
+	color: #1a1a1a;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 20px;
+	cursor: pointer;
+}
+
+.submit:disabled {
+	background: #eceff1;
+	color: #7b8e98;
+	cursor: progress;
+}
+
+.error {
+	color: #f44336;
+	font-size: 14px;
+}

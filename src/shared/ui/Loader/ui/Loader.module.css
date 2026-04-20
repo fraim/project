@@ -1,0 +1,37 @@
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 24px;
+}
+
+.full {
+	min-height: 50vh;
+}
+
+.spinner {
+	width: 36px;
+	height: 36px;
+	border: 3px solid rgba(248, 168, 21, 0.25);
+	border-top-color: #f8a815;
+	border-radius: 50%;
+	animation: loader-rotate 900ms linear infinite;
+}
+
+.size-sm {
+	width: 20px;
+	height: 20px;
+	border-width: 2px;
+}
+
+.size-lg {
+	width: 56px;
+	height: 56px;
+	border-width: 4px;
+}
+
+@keyframes loader-rotate {
+	to {
+		transform: rotate(360deg);
+	}
+}

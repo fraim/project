@@ -1,0 +1,30 @@
+.reviews {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.heading {
+	margin: 12px 0 0;
+	font-weight: 800;
+	font-size: 24px;
+	line-height: 28px;
+}
+
+.actionRow {
+	display: flex;
+	gap: 16px;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding-bottom: 12px;
+	border-bottom: 1px solid #eceff1;
+}
+
+.empty {
+	margin: 0;
+	margin-bottom: 24px;
+	color: #7b8e98;
+	font-size: 14px;
+	line-height: 20px;
+}

@@ -1,0 +1,39 @@
+.wrapper {
+	max-width: 420px;
+	margin: 60px auto 40px;
+	padding: 32px;
+	background-color: #fff;
+	border: 1px solid #eceff1;
+	border-radius: 16px;
+	box-shadow: 0 10px 30px rgba(40, 41, 61, 0.06);
+}
+
+.title {
+	margin: 0 0 24px;
+	font-size: 24px;
+	font-weight: 700;
+	text-align: center;
+	color: #1a1a1a;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.footer {
+	display: flex;
+	justify-content: center;
+	margin-top: 16px;
+}
+
+.link {
+	color: #f8a815;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.link:hover {
+	text-decoration: underline;
+}

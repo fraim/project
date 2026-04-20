@@ -1,0 +1,17 @@
+.wrap {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	margin-bottom: 24px;
+}
+
+.cartBtn {
+	flex: 1 1;
+	padding: 14px 70px;
+}
+
+@media (width <= 400px) {
+	.cartBtn {
+		padding: 14px 20px;
+	}
+}

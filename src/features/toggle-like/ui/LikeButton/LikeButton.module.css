@@ -1,0 +1,56 @@
+.button {
+	display: flex;
+	padding: 0;
+	background: none;
+	border: none;
+	cursor: pointer;
+	transition: transform 0.15s ease-out;
+}
+
+.button:hover {
+	transform: scale(1.1);
+}
+
+.button:disabled {
+	cursor: progress;
+	opacity: 0.7;
+}
+
+.button svg {
+	fill: #ffffff;
+}
+
+.button svg path:first-child {
+	fill: #7b8e98;
+}
+
+.active svg {
+	fill: #f44336;
+}
+
+.active svg path:first-child {
+	fill: #f44336;
+}
+
+.button_with-label {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	padding: 8px 16px 8px 10px;
+	background: #ffffff;
+	border: 1px solid #cfd8dc;
+	border-radius: 55px;
+	transition: border-color 0.2s, background-color 0.2s, transform 0.15s ease-out;
+}
+
+.button_with-label:hover {
+	transform: none;
+	border-color: #f44336;
+}
+
+.label {
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 20px;
+	color: #1a1a1a;
+}
